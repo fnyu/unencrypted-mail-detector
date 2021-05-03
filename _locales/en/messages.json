@@ -1,0 +1,8 @@
+{
+    "extensionName": {
+        "message": "Unencrypted Mail Detector"
+    },
+    "extensionDescription": {
+        "message": "An extension that tags unencrypted messages in your inbox."
+    }
+}

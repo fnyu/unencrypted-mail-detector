@@ -1,0 +1,82 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./pure.min.css" />
+        <script type="module" src="./options.js" type="application/javascript"></script>
+        <title>Unencrypted Mail Detector</title>
+        <style>
+        .button-success,
+        .button-error,
+        .button-warning,
+        .button-secondary {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-success {
+            background: rgb(28, 184, 65);
+            /* this is a green */
+        }
+        .button-xs {
+            font-size: 70%;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="pure-g">
+            <div class="pure-u-1-4"></div>
+            <div class="pure-u-1-2">           
+                 <form name="UMDConfig" class="pure-form pure-form-stacked">
+                     <fieldset>
+                         <legend>
+                             Unencrypted Mail Detector Configuration
+                         </legend>
+                     <label for="UMDScanMode">Scanning mode</label>
+                     <select id="UMDScanMode" class="pure-input-1-2">
+                         <option value="disabled">Disabled</option>
+                        <option value="all">All incoming messages</option>
+                        <option value="custom">Custom rules</option>
+                    </select>
+                    <label for="UMDGlobalTag">Global Tag</label>
+                    <select id="UMDGlobalTag" class="pure-input-1-2" disabled>
+                   </select>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Domain specific configuration</legend>
+                    <label for="UMDCustomDomain">
+                        Domain name
+                    </label>
+                    <input type="text" class="pure-input-1-2" value="" placeholder="e.g. gmail.com" id="UMDCustomDomain" />
+                    <label for="UMDCustomDomainCheckingMode">Checking mode</label>
+                    <select id="UMDCustomDomainCheckingMode" class="pure-input-1-2">
+                        <option value="always">Always</option>
+                        <option value="internal">Only internal mail</option>
+                   </select>
+                    <label for="UMDCustomDomainTag">Tag</label>
+                    <select id="UMDCustomDomainTag" class="pure-input-1-2">
+                   </select>
+                   <button id="UMDSave" class="pure-input-1-2 pure-button pure-button-primary">Save</button>
+                </fieldset>
+                     </form>
+
+                     <table id="UMDCustomDomainsTable" class="pure-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Domain name</th>
+                                <th>Checking mode</th>
+                                <th>Tag</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+            </div>
+            <div class="pure-u-1-4"></div>
+        </div>
+    </body>
+</html>

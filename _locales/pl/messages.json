@@ -1,0 +1,8 @@
+{
+    "extensionName": {
+        "message": "Unencrypted Mail Detector"
+    },
+    "extensionDescription": {
+        "message": "Rozszerzenie, które oznacza etykietą niezaszyfrowane wiadomości w skrzynce odbiorczej."
+    }
+}
